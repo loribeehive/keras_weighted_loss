@@ -128,7 +128,7 @@ def customLoss(yTrue, yPred):
                             reduction_indices=len(yPred.get_shape()) - 1,
                             keep_dims=True)
             # manual computation of crossentropy
-         epsilon = K._to_tensor(K.epsilon(), yPred.dtype.base_dtype)
+         epsilon = K._to_tensor(tf.keras.backend.epsilon(), yPred.dtype.base_dtype)
          yPred = tf.clip_by_value(yPred, epsilon, 1. - epsilon)
          yPred = tf.log(yPred)
 

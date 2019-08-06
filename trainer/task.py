@@ -148,7 +148,7 @@ if __name__ == '__main__':
   parser.add_argument(
       '--train-steps',
       type=int,
-      default=49,
+      default=30,
       help="""\
         Maximum number of training steps to perform
         Training steps are in the units of training-batch-size.
@@ -157,17 +157,17 @@ if __name__ == '__main__':
   parser.add_argument(
       '--eval-steps',
       help='Number of steps to run evalution for at each checkpoint',
-      default=200,
+      default=7,
       type=int)
   parser.add_argument(
       '--train-batch-size',
       type=int,
-      default=80000,
+      default=30000,
       help='Batch size for training steps')
   parser.add_argument(
       '--eval-batch-size',
       type=int,
-      default=8000,
+      default=30000,
       help='Batch size for evaluation steps')
   parser.add_argument(
       '--learning-rate',
